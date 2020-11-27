@@ -1,0 +1,27 @@
+@import "./style";
+// @import "./authentication";
+
+// .contents{
+//
+//   td.main-label{
+//     font-weight: bold;
+//   }
+// }
+
+.carousel-3d-container figure {
+  margin: 0;
+
+}
+
+.carousel-3d-container figcaption {
+  position: absolute;
+  background-color: red;
+  color: #fff;
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  font-size: 12px;
+  min-width: 100%;
+  box-sizing: border-box;
+}

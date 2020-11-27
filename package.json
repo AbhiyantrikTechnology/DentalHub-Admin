@@ -1,0 +1,84 @@
+{
+  "name": "dentalapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "unit": "jest"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "@tinymce/tinymce-vue": "^2.0.0",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^0.18.0",
+    "bootstrap-vue": "^2.1.0",
+    "chart.js": "^2.9.2",
+    "countup.js": "^2.0.4",
+    "i": "^0.3.6",
+    "moment": "^2.24.0",
+    "npm": "^7.0.3",
+    "vue": "^2.6.6",
+    "vue-axios": "^2.1.4",
+    "vue-countup-v2": "^4.0.0",
+    "vue-eva-icons": "^1.1.0",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^4.5.8",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^26.6.0",
+    "babel-plugin-istanbul": "^5.1.1",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "jest": "^26.6.0",
+    "jsdom": "^14.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-jest": "^3.0.4",
+    "vue-template-compiler": "^2.5.21",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    }
+  }
+}

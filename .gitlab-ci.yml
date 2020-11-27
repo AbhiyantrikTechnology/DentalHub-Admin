@@ -1,0 +1,30 @@
+build site:
+  image: node:14.7
+  stage: build
+  only:
+    - dev-aswin
+  script:
+    - npm install --progress=false
+    - npm run build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+
+deploy:
+  image: alpine
+  stage: deploy
+  before_script:
+    - apk add openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - scp -o StrictHostKeyChecking=no -r ./dist centos@18.136.58.221:/home/centos/
+    - ssh -o StrictHostKeyChecking=no centos@18.136.58.221 "ls -al /home/centos/"
+    - ssh -o StrictHostKeyChecking=no centos@18.136.58.221 "ls -al /home/centos/dist/"
+    - ssh -o StrictHostKeyChecking=no centos@18.136.58.221 "sudo rm -R /home/ajdental/public_html" 
+    - ssh -o StrictHostKeyChecking=no centos@18.136.58.221 "sudo mv /home/centos/dist/ /home/ajdental/public_html"
+    - ssh -o StrictHostKeyChecking=no centos@18.136.58.221 "sudo chown -R ajdental:ajdental /home/ajdental/public_html"
+    - ssh -o StrictHostKeyChecking=no centos@18.136.58.221 "sudo ls -al /home/ajdental/public_html"    

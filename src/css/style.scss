@@ -1,0 +1,130 @@
+//Theme Colors
+$text-color: #8A8C99;
+$title-color: #31393C;
+$body-background-color: #F5F6FC;
+$active-color: #007BFF;
+
+//Toasts Colors
+$toast-success-header-color: #9CE37D;
+$toast-success-body-color: #A5E588;
+$toast-success-body-text-color: #2F4B26;
+
+//Screen Sizes
+$mobile-screen: 576px;
+$tablet-screen: 768px;
+$laptop-screen: 992px;
+$large-screen: 1200px;
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 17px;
+  min-height: 100vh;
+  background: $body-background-color;
+  // font-family: 'Baloo Thambi', cursive;
+  font-family: 'Maven Pro', sans-serif;
+  color: $text-color;
+
+  .nav-tabs {
+    border-bottom: none;
+    .nav-link{
+      border: none;
+      color: $text-color !important;
+        &:hover{
+          color: #000 !important;
+        }
+      &.active{
+        &:after{
+          background-color: $active-color;
+          content: '';
+          display: block;
+          height: 4px;
+          width: 28px;
+          border-radius: 100px;
+      }
+      }
+    }
+  }
+  .text-danger{
+    color: #000 !important;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    color: $title-color;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: bold;
+  }
+
+  .btn-custom{
+    background-color: $active-color;
+    color: #fff;
+    border-radius: 15px;
+
+    &:hover{
+      background-color: rgba($active-color, 0.8);
+    }
+  }
+
+  .b-toast-custom-success{
+
+    .toast-header{
+      background: $toast-success-header-color;
+      // color: #fff;
+    }
+
+    .toast-body{
+      background: $toast-success-body-color;
+      color: $toast-success-body-text-color;
+    }
+  }
+
+  input, select, .multiselect__tags{
+    padding-bottom: 8px;
+    border:solid 1px #ccc;
+    border-radius: 25px;
+
+    &::placeholder{
+      font-family: 'Maven Pro', sans-serif;
+      font-size: 14px;
+    }
+  }
+
+  select{
+    font-size: 14px;
+    color: #495057;
+  }
+
+  .contents{
+    padding-top: 80px;
+    padding-right: 60px;
+    padding-left: 60px;
+    height: 100%;
+
+    .card{
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+    }
+
+    .dropdown-divider{
+      width: 50%;
+      border-radius: 50%;
+      border-top: 5px solid $text-color;
+    }
+
+    .data-list{
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    @media screen and (max-width: $tablet-screen){
+      padding: 5rem 1rem .5rem 1rem;
+    }
+  }
+}

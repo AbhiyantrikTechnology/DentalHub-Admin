@@ -1,0 +1,116 @@
+@import "./style";
+// @import "./authentication";
+
+// #app{
+//   height: 100vh;
+// }
+
+.contents{
+  padding-top: 20px !important;
+
+    .counter{
+      font-size: 60px;
+      font-weight: bolder;
+      margin-bottom: 0 !important;
+    }
+
+    .counter-label{
+      margin-bottom: 0 !important;
+      font-size: 20px;
+    }
+
+    .chart-counter{
+
+      canvas{
+        width: 770px !important;
+        height: 385px !important;
+        display: block;
+      }
+    }
+
+    .static-card{
+      min-height: 85vh;
+      height: 85vh;
+      overflow-y: auto;
+    }
+
+    .about-card{
+
+      ul{
+
+        li{
+          list-style: none;
+        }
+      }
+    }
+
+    // .login-background-card{
+      // padding: 0 !important;
+      // position: relative;
+      // font-weight: bold;
+      // font-size: 5vw;
+      // border: none;
+      // height: auto;
+
+    .login-card{
+      border: none;
+      // position: absolute;
+      font-size: 16px;
+      height: auto;
+      width: 100%;
+      // transform: translate(170%, -15%);
+
+      .title-text{
+        font-size: 4vh;
+        font-weight: bold;
+      }
+
+      input{
+        height: 50px;
+
+        &::placeholder{
+          font-size: 16px;
+        }
+      }
+
+      .nav{
+          font-size: 0.8em;
+        }
+
+      @media screen and (max-width: $mobile-screen){
+        position: unset;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        transform: none;
+
+        .submit-button{
+          margin-top: 40px;
+        }
+      }
+      }
+
+      // @media screen and (max-width: $large-screen){
+      //   font-size: 8vw;
+      // }
+      //
+      // @media screen and (max-width: $mobile-screen){
+      //   font-size: 10vw;
+      //   height: 30vh;
+      // }
+    }
+
+    @media screen and (max-width: $mobile-screen){
+      height: auto !important;
+      padding-top: 25%;
+
+      p{
+        display: contents;
+        padding-right: 30px;
+      }
+    }
+
+  @media screen and (max-width: $mobile-screen){
+    padding-top: 0 !important;
+  }
+// }

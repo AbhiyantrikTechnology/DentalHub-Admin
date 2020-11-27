@@ -1,0 +1,44 @@
+@import './style';
+
+.card{
+    width: 100%;
+    .link-header{
+        display: flex;
+        .links{
+            ul{
+                margin: 0;
+                // li{
+                //     float: left;
+                //     list-style-type: none;
+                //     text-decoration: none;
+                //     padding: 5px 10px;
+                //     text-transform: uppercase;
+                //     button{
+                //       border: none;
+                //       background: none;   
+                //       text-transform: capitalize;
+                //       color: $text-color; 
+                //       font-weight: 700;
+                //       outline: none;
+
+                //       &:hover{
+                //           color:$title-color;
+                //       }
+
+                //       &:focus{
+                //         &:after{
+                //             background-color: $active-color;
+                //             content: '';
+                //             display: block;
+                //             height: 4px;
+                //             width: 28px;
+                //             border-radius: 100px;
+                //         }
+                //       }
+                //   }
+                // }
+            }
+        }
+    }
+}
+
